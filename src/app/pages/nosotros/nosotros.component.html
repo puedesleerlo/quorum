@@ -1,0 +1,102 @@
+<div>
+  <img [src]="image" width="100%" alt="">
+  <div class="main-caption image-caption">
+    <h1 class="header">Nosotros</h1>
+    <!-- <p>This carousel hides navigation arrows and indicators.</p> -->
+  </div>
+</div>
+
+<section class="q-box">
+    <h1 class="header">¿Quiénes somos?</h1>
+    <div class="divider"> </div>
+    <p class="q-box-content">Somos un equipo multidisciplinar de profesionales
+        que ofrece asesoramiento estratégico. La experiencia y la formación de nuestro
+        talento humano en proyectos de investigación y consultoría se configuran
+        como nuestro mayor valor.
+    </p> <br>
+    <p class="q-box-content">A partir de esto, potenciamos capital social, estructuramos 
+        proyectos e implementamos planes y políticas que tengan por objetivo la transformación
+        social, la construcción de ciudadanías participativas y el ejercicio responsable de 
+        la política.
+        </p> <br>
+</section>
+<div class="grid-2">
+<section class="q-box">
+    <h1 class="header">Misión</h1>
+    <div class="divider"></div>
+    <p class="q-box-content">
+        Promover la construcción de tejido social y ciudadanía en las regiones de 
+        Colombia desde la gestión y la investigación, con base en nuestras cuatro
+        líneas estratégicas. 
+    </p>
+</section>
+<section class="q-box">
+    <h1 class="header">Visión</h1>
+    <div class="divider"></div>
+    <p class="q-box-content">
+        Contribuir con la construcción de ciudadanías participativas y gobiernos 
+        responsables para la transformación de los entornos sociales y políticos de Colombia.
+    </p>
+</section>
+</div>
+
+<section class="video-nosotros">
+  <iframe width="100%" height="430px" src="https://www.youtube.com/embed/peyQLt44y7U" 
+  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen></iframe>
+</section>
+
+<section class="q-box">
+  <h1 class="header">Equipo</h1>
+  <div class="divider"></div>
+  <div class="grid-3">
+    <div class="member" *ngFor="let member of members" (click)="openDialog(member)">
+      <img [src]="member.small" width="80%" alt="">
+      <h3>{{member.nombre}}</h3>
+      <h5>{{member.cargo}}</h5>
+    </div>
+  </div>
+</section>
+
+<section class="affiche">
+  <div>
+    <div class="divider"></div>
+    <p>Somos un grupo de profesionales especializados y con experiencia en diversas áreas.
+      <br>
+
+        Nuestro trabajo ofrece estrategias que fortalecen la construcción de ciudadanías y la
+        articulación política y gubernamental en las diversas regiones de Colombia.</p>
+    
+    <div class="divider"></div>
+  </div>
+  <div class="logo">
+    <img src="../../../assets/quorum2.png" width="350px" alt="">
+  </div>
+</section>
+
+<!-- <div>
+  <img [src]="image" width="100%" alt="">
+</div>
+
+<h1 class="header">Equipo</h1>
+<mat-grid-list cols="3" rowHeight="1:1">
+  <mat-grid-tile *ngFor="let member of members" (click)="openDialog(member)">
+    <img width="100%" height="100%" [src]="member" class="rounded-circle" alt="">
+  </mat-grid-tile>
+</mat-grid-list> -->
+<!-- <div class="row">
+  <div class="col-md-4" *ngFor="let member of members">
+    <img width="100%" height="100%" [src]="member" class="rounded-circle" alt="">
+  </div>
+</div> -->
+
+<!-- <div class="frame">
+  <div class="affiche">
+    Somos un grupo de profesionales 
+  </div>
+  <div class="logo">
+    <img src="./../../../assets/quorum2.png" width="100%" alt="">
+  </div>
+</div> -->
+
+<app-footer></app-footer>

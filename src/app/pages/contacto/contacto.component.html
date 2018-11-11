@@ -1,0 +1,37 @@
+<div class="fondo contacto">
+  <h1 class="header">Contacto</h1>
+  <div class="divider"></div>
+  <mat-card>
+    <mat-card-content>
+        <form [formGroup]="contacto" class="contacto-form" (ngSubmit)="onSubmit()">
+            <mat-form-field class="contacto-full-width">
+              <input formControlName="nombre" matInput placeholder="Nombre">
+              <mat-error *ngIf="contacto?.controls.nombre.errors?.required">
+                Este campo es <strong>requerido</strong>
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="contacto-full-width">
+              <input formControlName="email" matInput placeholder="Correo electrónico">
+              <mat-error *ngIf="contacto?.controls.email.errors?.email
+                  && !contacto.controls.email.errors?.required">
+                Por favor copia un email válido
+              </mat-error>
+              <mat-error *ngIf="contacto?.controls.email?.errors?.required">
+                Este campo es <strong>requerido</strong>
+              </mat-error>
+            </mat-form-field>
+          
+            <mat-form-field class="contacto-full-width">
+              <textarea formControlName="asunto" matInput placeholder="Dejanos tus inquietudes"></textarea>
+              <mat-error *ngIf="contacto?.controls.asunto.errors?.required">
+                El asunto es <strong>requerido</strong>
+              </mat-error>
+            </mat-form-field>
+              
+            <button class="button-form" color="primary" mat-raised-button type="submit" [disabled]="!contacto.valid">Enviar</button>
+        </form> 
+    </mat-card-content>
+  </mat-card>
+    
+</div>
+<app-footer></app-footer>

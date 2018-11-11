@@ -1,0 +1,10 @@
+<p>
+  individual-post works!
+</p>
+<div class="individual-post">
+  <img width="100%" [src]="post.featured_image" alt="">
+  <h2>
+    {{post.title}}
+  </h2>
+  <div [innerHTML] = "post.content"></div>
+</div>

@@ -1,0 +1,38 @@
+.total {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.team-content {
+    padding:120px 20%;
+    color: white;
+    text-align: center;
+    .divider-white {
+        margin: 20px auto;
+        width: 100px;
+        height: 5px;
+        background: white;
+    }
+    .grad{
+        font-size: 40px;
+    }
+
+    .titles-box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-column-gap: 10px;
+        margin: 20px auto;
+        .titles-item {
+            border-radius: 10px;
+            border: 1px solid white;
+            
+            justify-content: center;
+            .title {
+                margin: auto;
+                padding: 10px;
+            }
+        }
+    }
+   
+}

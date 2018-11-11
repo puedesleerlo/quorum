@@ -1,0 +1,27 @@
+.line-header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 4fr;
+    padding: 10px 20px;
+     * {
+         padding: 5px;
+     }
+    width: 360px;
+    
+}
+.line-content {
+    margin: 20px 20%;
+    font-size: 20px;
+    p {
+        text-align: center;
+    }
+    ul {
+        list-style: none;
+    }
+}
+
+.line-item {
+    span {
+        margin-left: 5px;
+    }
+}

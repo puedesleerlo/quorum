@@ -1,0 +1,28 @@
+<p>
+  blog works!
+</p>
+<div *ngFor="let article of articles">
+  {{article.ID}}
+</div>
+
+<div class="grid-2 blog-header">
+  <a class="sticky" routerLink="./{{stickyPost.slug}}">
+    <img width="100%" [src]="stickyPost.featured_image" alt="">
+    <span>{{stickyPost.title}}</span>
+  </a>
+  <div class="news grid-2" >
+    <div *ngFor="let post of newPosts">
+      <img width="100%" [src]="post.featured_image" alt="">
+      <span>{{post.title}}</span>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="grid-3 blog-articles">
+  <div class="regular-article" *ngFor="let article of articles">
+    <img width="100%" [src]="article.featured_image" alt="">
+    <span>{{article.title}}</span>
+  </div>
+</div>

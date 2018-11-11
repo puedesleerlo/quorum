@@ -1,0 +1,13 @@
+<div class="total" [ngStyle]="background">
+  <div class="team-content">
+    <h2>{{data.name}}</h2>
+    <div class="divider-white"></div>
+    <i class="fa fa-graduation-cap grad"></i>
+    <div class="titles-box">
+        <div class="titles-item" *ngFor="let title of data.titles">
+          <div class="title">{{title}}</div>
+        </div>
+    </div>
+    <p>{{data.biography}}</p>
+  </div>
+</div>

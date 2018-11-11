@@ -1,0 +1,18 @@
+<div>
+    <div class="line-header">
+        <img width="100%" [src]="'../' + data.logo" alt="">
+        <h5 [ngStyle]="{'color': data.color}">{{data.label}}</h5>
+    </div>
+    <div class="line-content">
+        <p>
+            {{data.info}}
+        </p>
+        <ul>
+            <li *ngFor="let item of data.items" class="line-item">
+                <i class="fa fa-arrow-circle-right" [ngStyle]="{'color': data.color}"></i> 
+                <span> {{item}}</span>
+            </li>
+        </ul>
+    </div>
+
+</div>

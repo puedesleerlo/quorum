@@ -1,0 +1,54 @@
+<ngb-carousel class="carrousel" *ngIf="images" >
+    <ng-template ngbSlide *ngFor="let image of images">
+      <img [src]="image.path" width="100%" alt="Random slide">
+      <div class="carousel-caption">
+        <h1 class="header">{{image.label}}</h1>
+        <!-- <p>This carousel hides navigation arrows and indicators.</p> -->
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+  <section class="q-box">
+      <h1 class="header">Nuestro trabajo</h1>
+      <div class="divider"> </div>
+      <div class="grid-4">
+          <div *ngFor="let work of works" (click) = "openDialog(work)">
+            <!-- <div class="qn quorum-logo-avatar" alt=""></div> -->
+            <img [src]="work.path" width="100%" alt="holitus">
+            <div class="work-caption">
+              <img width="100%" [src]="work.logo" alt="">
+              <h5 [ngStyle]="{'color': work.color}">{{work.label}}</h5>
+            </div>
+            
+            
+          </div>
+      </div>
+  </section>
+  
+<section class="q-box">
+  <h1 class="header">Acerca de Quorum</h1>
+  <div class="divider"> </div>
+  <p class="q-box-content">Somos un equipo multidisciplinar de profeionales que ofrece 
+    asesoramiento estratégico. La experiencia y la formación de nuestro talento
+  humano en procesos de investigación y consultoría se configuran como nuestro mayor
+valor.</p> <br>
+<p class="q-box-content">
+  A partir de esto, potenciamos el capital social, estructuramos proyectos e implementamos
+  planes y políticas que tengan por objetivo la transformación social, la construcción
+  de ciudadanías participativas y el ejercicio responsable de la política.
+</p>
+
+</section>
+<section class="q-box">
+  <h1 class="header">Aliados</h1>
+  <div class="grid-3">
+      <div *ngFor="let aliado of aliados">
+        <img [src]="aliado" width="100%" alt="holitus">
+      </div>
+  </div>
+</section>
+
+  
+
+  <app-footer></app-footer>
+  

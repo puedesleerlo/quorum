@@ -1,0 +1,29 @@
+.contacto-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .contacto-full-width {
+    width: 100%;
+  }
+
+.contacto {
+  height: 750px;
+  padding-top: 100px;
+  background-image: url("../../../assets/contacto.jpg");
+  background-size: cover;
+  mat-card {
+    opacity: 0.8;
+    margin: 0 30%;
+    padding: 3%;
+  }
+}
+.button-form {
+  float: right;
+}
+mat-form-field {
+  margin-top: 10px;
+  font-size: 20px;
+}
