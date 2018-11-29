@@ -8,11 +8,13 @@ import { RoutingModule } from './app.routing';
 import { MaterialModule } from './material/material.module';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,6 @@ import { environment } from 'src/environments/environment';
     RoutingModule,
     MaterialModule,
     AngularFireModule.initializeApp(environment.firebase)
-
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,6 +3,7 @@
     width: 100%;
     background-size: cover;
     background-attachment: fixed;
+    overflow: hidden;
 }
 .team-content {
     padding:120px 20%;
@@ -26,11 +27,11 @@
         .titles-item {
             border-radius: 10px;
             border: 1px solid white;
-            
-            justify-content: center;
+            display: grid;
             .title {
                 margin: auto;
                 padding: 10px;
+                align-self: center;
             }
         }
     }

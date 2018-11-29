@@ -1,28 +1,61 @@
-<p>
-  blog works!
-</p>
-<div *ngFor="let article of articles">
-  {{article.ID}}
-</div>
+<div class="blog-component">
 
-<div class="grid-2 blog-header">
-  <a class="sticky" routerLink="./{{stickyPost.slug}}">
-    <img width="100%" [src]="stickyPost.featured_image" alt="">
-    <span>{{stickyPost.title}}</span>
-  </a>
-  <div class="news grid-2" >
-    <div *ngFor="let post of newPosts">
-      <img width="100%" [src]="post.featured_image" alt="">
-      <span>{{post.title}}</span>
+  <div class="grid-2 blog-header">
+    
+    <a class="sticky" routerLink="./{{stickyPost.slug}}">
+      <div class="banner">
+          <img src="../../../assets/logosquorum/qn.png" width="20px" alt="">
+          Recomendado
+        </div>
+      <div class="overlay">
+        <div class="text">
+          <img src="../../../assets/logosquorum/qn.png" width="50px" alt="">
+          Ver</div>
+      </div>
+      <mat-card>
+        <img mat-card-image [src]="stickyPost.featured_image">
+        <mat-card-title>
+          {{stickyPost.title}}
+        </mat-card-title>
+      </mat-card>
+    </a>
+    <div class="news-container">
+        <div class="banner">
+            <img src="../../../assets/logosquorum/qn.png" width="20px" alt="">
+            Nuevos
+          </div>
+          <div class="news">
+              <a routerLink="./{{post.slug}}" *ngFor="let post of newPosts">
+                <div class="overlay">
+                  <div class="text">
+                    <img src="../../../assets/logosquorum/qn.png" width="50px" alt="">
+                    Ver</div>
+                </div>
+                <div class="new" [ngStyle]="background(post.featured_image)">
+                  <h3 class="title-news">{{post.title}}</h3>
+                </div>
+              </a>
+            </div>
     </div>
+    
   </div>
+
+  <div class="divider"></div>
+
+  <div class="grid-3 blog-articles">
+    <a routerLink="./{{article.slug}}" class="regular-article" *ngFor="let article of articles">
+      <div class="overlay">
+        <div class="text">
+          <img src="../../../assets/logosquorum/qn.png" width="50px" alt="">
+          Ver</div>
+      </div>
+
+        <img width="100%" [src]="article.featured_image">
+        <h3>{{article.title}}</h3>
+
+    </a>
+  </div>
+
 </div>
 
-<div class="divider"></div>
-
-<div class="grid-3 blog-articles">
-  <div class="regular-article" *ngFor="let article of articles">
-    <img width="100%" [src]="article.featured_image" alt="">
-    <span>{{article.title}}</span>
-  </div>
-</div>
+<app-footer></app-footer>

@@ -11,7 +11,8 @@ export const environment = {
     projectId: "quorum-d30f8",
     storageBucket: "quorum-d30f8.appspot.com",
     messagingSenderId: "670435662677"
-  }
+  },
+  apiBlog: 'https://public-api.wordpress.com/rest/v1.1/sites/corporacionquorum.wordpress.com/'
 };
 
 /*

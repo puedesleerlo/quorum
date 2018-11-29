@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-menu',
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
   links = [
     {
-      path: "./",
+      path: "./inicio",
       label: "Inicio"
     },
     {
@@ -24,13 +26,19 @@ export class MenuComponent implements OnInit {
       label: "Contacto"
     },
     {
-      path: "./blog",
-      label: "Blog"
+      path: "./diurno",
+      label: "Diurno"
     }
   ]
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  onKeydown(event) {
+    if (event.key === "Enter") {
+      console.log(event);
+      this.router.navigate(['./search/' + "ABC"])
+    }
+  }
 }

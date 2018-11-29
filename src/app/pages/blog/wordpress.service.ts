@@ -1,6 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/x-www-form-urlencoded',
+  })
+};
 @Injectable({
   providedIn: 'root'
 })
@@ -18,7 +23,7 @@ export class WordpressService {
   }
 
   getNewPosts() {
-    var add = "?number=4"
+    var add = "?number=4&stycky=exclude"
     return this.http.get(this.url + add)
   }
 
@@ -30,5 +35,10 @@ export class WordpressService {
   getPost(slug) {
     var add = `slug:${slug}`
     return this.http.get(this.url + add)
+  }
+
+  getRelatedPost(id) {
+    var add = `${id}/related`
+    return this.http.post(this.url + add, 'size=3')
   }
 }

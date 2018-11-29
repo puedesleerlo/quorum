@@ -9,7 +9,7 @@ import {PostResolver} from "./blog/individual-post/post.resolver"
 import { IndividualPostComponent } from './blog/individual-post/individual-post.component';
 const routes: Routes = [
     {
-        path: "",
+        path: "inicio",
         component: InicioComponent
     },
     {
@@ -25,11 +25,11 @@ const routes: Routes = [
         component: ContactoComponent
     },
     {
-        path: "blog",
+        path: "diurno",
         component: BlogComponent
     },
     {
-        path: "blog/:slug",
+        path: "diurno/:slug",
         resolve: {
             post: PostResolver
         },

@@ -1,9 +1,6 @@
-<div>
+<div class="nosotros-header">
   <img [src]="image" width="100%" alt="">
-  <div class="main-caption image-caption">
-    <h1 class="header">Nosotros</h1>
-    <!-- <p>This carousel hides navigation arrows and indicators.</p> -->
-  </div>
+  <h1 class="header">Nosotros</h1>
 </div>
 
 <section class="q-box">
@@ -49,9 +46,14 @@
 <section class="q-box">
   <h1 class="header">Equipo</h1>
   <div class="divider"></div>
-  <div class="grid-3">
+  <div class="grid-3 team-container">
     <div class="member" *ngFor="let member of members" (click)="openDialog(member)">
-      <img [src]="member.small" width="80%" alt="">
+        <div class="overlay">
+            <div class="text">
+              <img src="../../../assets/logosquorum/qn.png" width="50px" alt="">
+              Ver</div>
+        </div>
+      <img class="member-small" [src]="member.small" width="80%" alt="">
       <h3>{{member.nombre}}</h3>
       <h5>{{member.cargo}}</h5>
     </div>

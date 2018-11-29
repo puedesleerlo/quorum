@@ -9,7 +9,7 @@ import { WordpressService } from './wordpress.service';
 export class BlogComponent implements OnInit {
   articles = []
   newPosts = []
-  stickyPost = {}
+  stickyPost = <any>{}
   constructor(private wordpress: WordpressService) { }
 
   ngOnInit() {
@@ -24,6 +24,10 @@ export class BlogComponent implements OnInit {
       this.newPosts = articles.posts;
       console.log(articles)
     });
+  }
+
+  background(path) {
+    return {'background-image': `url(${path})`}
   }
 
 }
